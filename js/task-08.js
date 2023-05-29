@@ -11,7 +11,7 @@ login.addEventListener("submit", (event) => {
     const {
       elements: { email, password },
     } = event.currentTarget;
-    console.log(`Email ${email.value} Password ${password.value}`);
+    console.log(`Email: ${email.value} Password: ${password.value}`);
     login.reset();
   }
 });
