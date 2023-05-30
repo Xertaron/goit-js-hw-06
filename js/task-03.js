@@ -15,20 +15,18 @@ const images = [
 
 const galleries = document.querySelector(".gallery");
 
-// images.forEach(function (content, index) {
-// galleries.insertAdjacentHTML("beforeend", markup);
-// index = document.createElement("li");
-// let image = document.createElement("img");
-// image.src = content.url;
-// image.alt = content.alt;
-// index.append(image);
-// galleries.append(index);
-// });
 const markup = images
-  .map((photo) => `<li><img src=${photo.url} alt=${photo.alt}></li>`)
+  .map(
+    (photo) =>
+      `<li><img class=attributes src=${photo.url} alt=${photo.alt}></li>`
+  )
   .join("");
 galleries.insertAdjacentHTML("afterbegin", markup);
-// galleries.innerHTML = markup;
-
-// galleries.insertAdjacentHTML("beforebegin", "<h2>Gallery</h2>");
-console.log(galleries);
+const attribute = document.querySelectorAll(".attributes");
+attribute.forEach((element) => {
+  element.style.width = "400px";
+});
+const lists = document.querySelectorAll("li");
+lists.forEach((element) => {
+  element.style.listStyle = "none";
+});
