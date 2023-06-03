@@ -1,5 +1,11 @@
-const buttonNegative = document.querySelector("button");
-const buttonPositive = buttonNegative.nextElementSibling.nextElementSibling;
+const counter = document.querySelector("#counter");
+const buttonNegative = document.querySelector(
+  "button[data-action='decrement']"
+);
+
+const buttonPositive = document.querySelector(
+  "button[data-action='increment']"
+);
 const counterValue = document.querySelector("#value");
 let currentNumber = 0;
 
