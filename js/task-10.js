@@ -8,6 +8,7 @@ const boxes = document.querySelector("#boxes");
 const input = controls.firstElementChild;
 const creation = document.querySelector("button[data-create]");
 const destruction = document.querySelector("button[data-destroy]");
+
 function createBoxes(amount) {
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");

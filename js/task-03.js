@@ -14,7 +14,9 @@ const images = [
 ];
 
 const galleries = document.querySelector(".gallery");
+galleries.style.display = "flex";
 
+galleries.style.gap = "30px";
 const markup = images
   .map(
     (photo) =>
@@ -24,7 +26,8 @@ const markup = images
 galleries.insertAdjacentHTML("afterbegin", markup);
 const attribute = document.querySelectorAll(".attributes");
 attribute.forEach((element) => {
-  element.style.width = "400px";
+  element.style.minWidth = "300px";
+  element.style.maxHeight = "233px";
 });
 const lists = document.querySelectorAll("li");
 lists.forEach((element) => {
